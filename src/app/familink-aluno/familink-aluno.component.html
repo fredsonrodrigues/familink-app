@@ -1,0 +1,17 @@
+<p>
+	Lista de Alunos
+</p>
+<div class="list-group">
+	<a href="#" class="list-group-item clearfix" *ngFor="let alunos of aluno">
+	<span class="pull-left">
+	<h6><strong>{{alunos.nome}}</strong></h6>
+	</span>
+		<span class="pull-right">
+			<button class="btn btn-success">Ver</button>
+			<button class="btn btn-danger">
+				<span class="glyphicon glyphicon-trash"></span>
+			</button>
+		</span>
+	</a>
+</div>
+

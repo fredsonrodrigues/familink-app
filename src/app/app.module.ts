@@ -4,10 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { FamilinkAlunoComponent } from './familink-aluno/familink-aluno.component';
+import { FamilinkAlunoPerfilComponent } from './familink-aluno-perfil/familink-aluno-perfil.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FamilinkAlunoComponent,
+    FamilinkAlunoPerfilComponent
   ],
   imports: [
     BrowserModule,
