@@ -1,8 +1,6 @@
-<p>
-	Lista de Alunos
-</p>
+<h4 class="text-center">Lista de Alunos</h4><br>
 <div class="list-group">
-	<a href="#" class="list-group-item clearfix" *ngFor="let alunos of aluno">
+	<a class="list-group-item clearfix" *ngFor="let alunos of aluno" [routerLink]="['/aluno', alunos.id]">
 	<span class="pull-left">
 	<h6><strong>{{alunos.nome}}</strong></h6>
 	</span>
