@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Aluno} from './Aluno';
+import {Aluno} from './aluno'; // O nome do arquivo deve ser em letra minuscula
 import {FamilinkAlunoService} from '../familink-aluno.service';
 
 @Component({
@@ -9,7 +9,7 @@ import {FamilinkAlunoService} from '../familink-aluno.service';
 	providers: [FamilinkAlunoService]
 })
 export class FamilinkAlunoComponent implements OnInit {
-	aluno: Aluno[];
+	alunos: Aluno[];
 	errorMessage: string;
 
 	constructor(private familinkAluno: FamilinkAlunoService) { }
@@ -21,9 +21,8 @@ export class FamilinkAlunoComponent implements OnInit {
 	getAluno() {
 		this.familinkAluno.getAluno()
 		.subscribe(
-			aluno => this.aluno = aluno,
+			aluno => this.alunos = aluno,
 			error => this.errorMessage = <any> error
 			);
-			console.log(this.aluno)
 	}
 }
