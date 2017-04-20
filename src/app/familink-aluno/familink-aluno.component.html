@@ -1,15 +1,18 @@
 <h4 class="text-center">Lista de Alunos</h4><br>
 <div class="row">
-  <div class="col-sm-6 col-md-3" *ngFor="let alunos of aluno">
-    <a [routerLink]="['/aluno', alunos.id]">
+  <div class="col-sm-6 col-md-3" *ngFor="let aluno of alunos">
+    <a [routerLink]="['/aluno', aluno.id]">
 	<div class="thumbnail">
       <img src="./assets/person.png" class="img-thumbnail">
       <div class="caption">
-        <h3><strong>{{alunos.nome}}</strong></h3>
+        <p>
+          Nome: {{aluno.nome}}<br>
+          Turma: {{aluno.turma}}<br>
+          Sala: {{aluno.sala}} <br>
+          Diarios {{ aluno.diarios.length}}
+        </p>
       </div>
     </div>
 	</a>
   </div>
 </div>
-
-
